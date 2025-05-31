@@ -1,0 +1,22 @@
+{
+	"id": 16,
+	"name": "slide-1715751400232",
+	"value": {
+		"id": 1715751400232,
+		"sort": 3,
+		"title": "Стеклопластиковые накопительные ёмкости",
+		"description": "Накопительные емкости используют для сбора и последующего хранения жидкостей различного характера как в бытовых, так и в промышленных сферах.",
+		"btnText": "Подробнее",
+		"link": "https://los-bio.ru/catalog/emkosti-i-rezervuary/nakopitelnye-emkosti",
+		"image": [
+			{
+				"id": 139,
+				"catalog": "certificates",
+				"name": "d2201750-5f8d-45e4-b55b-35141913f17e.webp",
+				"isDeleted": false
+			}
+		],
+		"isSaved": false,
+		"deleted": false
+	}
+}

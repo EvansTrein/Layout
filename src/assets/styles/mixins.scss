@@ -1,0 +1,69 @@
+@use './vars.scss';
+
+@mixin debug {
+  outline: 4px dashed rgb(190, 12, 12);
+  background-color: rgb(95, 85, 52);
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+@mixin text-nowrap {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: 100%;
+}
+
+@mixin center75w {
+  width: 75%;
+  margin: 0 auto;
+
+  @media (max-width: vars.$wideBrp) {
+    width: 80%;
+  }
+
+  @media (max-width: vars.$largeBrp) {
+    width: 85%;
+  }
+
+  @media (max-width: vars.$xxlBrp) {
+    width: 90%;
+  }
+
+  @media (max-width: vars.$xlBrp) {
+    width: 92%;
+  }
+
+  @media (max-width: vars.$mdBrp) {
+    width: 95%;
+    padding: 0 10px;
+  }
+
+  @media (max-width: vars.$smBrp) {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  @media (max-width: vars.$xsBrp) {
+    padding: 0 8px;
+  }
+}
+
+@mixin hide($breakpoint) {
+
+  @media (max-width: ($breakpoint - 1)) {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    overflow: hidden;
+  }
+}
