@@ -46,18 +46,17 @@ onMounted(() => {
 @use '~/assets/styles/mixins' as m;
 
 .slide {
-	display: flex;
+  display: flex;
   width: 100%;
   align-items: center;
-	height: 600px;
-	// @include m.debug;
+  height: 600px;
 	
   @media (max-width: v.$smBrp) {
-		justify-content: center;
+    justify-content: center;
     flex-direction: column;
     text-align: center;
   }
-	
+
   &__info {
 		display: flex;
     flex-direction: column;
@@ -65,28 +64,29 @@ onMounted(() => {
     cursor: default;
     width: 60%;
     max-width: 800px;
-		overflow: hidden;
-		
+    overflow: hidden;
+
     @media (max-width: v.$smBrp) {
-			justify-content: center;
+      justify-content: center;
       align-items: center;
       text-align: center;
     }
   }
-
+	
   &__title {
 		text-wrap: balance;
-    font-size: clamp(1.5rem, 5vw, 4rem);
+    font-size: clamp(1rem, 3.2vw, 4.5rem);
     font-weight: bold;
+		// @include m.debug;
   }
 	
   &__desc {
-		text-wrap: balance;
-		max-height: 150px;
+    text-wrap: balance;
+    max-height: 150px;
     max-width: 600px;
-    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    font-size: clamp(0.8rem, 1vw, 1.5rem);
   }
-	
+
   &__but {
     padding: 0.6rem 1.3rem;
     max-width: 200px;
@@ -94,6 +94,8 @@ onMounted(() => {
 
   &__img {
     width: 40%;
+    max-width: 600px;
+    min-height: 40%;
     @include m.hide(v.$smBrp);
   }
 
@@ -101,7 +103,6 @@ onMounted(() => {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-top: 3rem;
     width: 100%;
   }
 

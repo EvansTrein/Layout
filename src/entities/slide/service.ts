@@ -31,7 +31,7 @@ export class SlideService {
         };
       });
     } catch (error) {
-      console.error('Error loading slides:', error);
+      console.error('Error loading Slides:', error);
       return [];
     }
   }
