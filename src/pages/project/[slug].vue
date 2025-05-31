@@ -2,7 +2,7 @@
 div.project-page
 	h1.b-project__title 
 		| Продукт 
-		span {{ id }}
+		span {{ slug }}
 	p.b-project__description Описание продукта
 	nuxt-link.b-project__back(to="/") Вернуться на главную
 </template>
@@ -10,7 +10,7 @@ div.project-page
 <script setup lang="ts">
 import { useRoute } from 'vue-router';
 const route = useRoute();
-const id = route.params.id;
+const slug = route.params.slug;
 </script>
 
 <style scoped lang="scss"></style>

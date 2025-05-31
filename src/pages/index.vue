@@ -3,6 +3,7 @@ Header
 main.wrap
 	Slider
 	Advantage
+	Projects
 
 </template>
 
@@ -10,6 +11,7 @@ main.wrap
 import Header from '@widgets/Header.vue';
 import Slider from '@widgets/Slider.vue';
 import Advantage from '@widgets/Advantage.vue';
+import Projects from '@widgets/Projects.vue';
 </script>
 
 <style scoped lang="scss">
