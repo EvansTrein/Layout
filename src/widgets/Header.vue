@@ -110,18 +110,17 @@ import Button from '@shared/buttons/button.vue';
     }
   }
 
-	&__logoLink {
-		min-width: 200px;
-		width: 20%;
-		display: inline-block;
-    
-	}
-	
+  &__logoLink {
+    min-width: 200px;
+    width: 20%;
+    display: inline-block;
+  }
+
   &__logo {
-		width: 100%;
-		height: auto;
+    width: 100%;
+    height: auto;
     color: var(--primary-color-80);
-		transition: var(--transition-fast);
+    transition: var(--transition-fast);
   }
 
   &__menu {
@@ -177,7 +176,7 @@ import Button from '@shared/buttons/button.vue';
   &__navBut {
     padding: 0.6rem 1.3rem;
 
-		@media (max-width: v.$mdBrp) {
+    @media (max-width: v.$mdBrp) {
       padding: 0.4rem 0.5rem;
     }
   }
@@ -187,8 +186,8 @@ import Button from '@shared/buttons/button.vue';
   p:hover {
     color: var(--primary-color);
   }
-	.header__logo:hover {
-		color: var(--white-50);
-	}
+  .header__logo:hover {
+    color: var(--white-50);
+  }
 }
 </style>
