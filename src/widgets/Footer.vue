@@ -44,6 +44,7 @@ footer.footer
 			div.footer__content-wrap
 				CallbackSvg.footer__callback
 				p.underline {{ mainStore.contacts.callback }}
+			Button.footer__but(text="Получить КП")
 </template>
 
 <script setup lang="ts">
@@ -70,6 +71,10 @@ const mainStore = useMainStore();
   height: 470px;
   display: flex;
   align-items: center;
+
+	&__but {
+		padding: 0.6rem 1rem;
+	}
 
   &__wrpap {
     display: flex;

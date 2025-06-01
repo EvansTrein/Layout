@@ -1,6 +1,7 @@
 <template lang="pug">
 div.app
 	Header
+	div.slug_menu
 	section.app__wrap
 		div {{ projectStore.project }}
 	Footer
