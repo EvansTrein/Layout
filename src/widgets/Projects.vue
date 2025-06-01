@@ -3,7 +3,7 @@ section(v-if="projectStore.data.length > 0")
 	h2.projects__header Проекты
 	div.projects__content
 		div.projects__element(v-for="(item, index) in projectStore.data")
-			a.projects__link(:href="`/project/${item.slug}`" target="_blank")
+			NuxtLink.projects__link(:to="`/project/${item.slug}`")
 				img.projects__photo(:src="item.photos[0]")
 				h3.projects__title Проект {{ item.id }}
 				div.projects__desc {{ item.allDescription[0] }}

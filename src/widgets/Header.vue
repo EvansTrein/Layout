@@ -14,7 +14,7 @@ header.header
 			MailSvg.header__topBarIcon
 			p los-bio@mail.ru
 		div.header__topBarItem
-			CallbackSvg.callback
+			CallbackSvg.header__callback
 			p Заказать звонок
 	
 	hr.header__line
@@ -44,15 +44,6 @@ import Button from '@shared/buttons/button.vue';
 @use '~/assets/styles/vars' as v;
 @use '~/assets/styles/mixins' as m;
 
-.callback {
-  stroke: var(--primary-color);
-  color: rgba(255, 255, 255, 0);
-  stroke-width: 3;
-  margin-right: 5px;
-  min-height: 24px;
-  min-width: 24px;
-}
-
 .header {
   width: 100%;
   padding: 10px 0;
@@ -69,7 +60,7 @@ import Button from '@shared/buttons/button.vue';
     gap: 2rem;
     font-size: v.$topBarFontSize;
     color: var(--white-50);
-    @include m.center75w;
+    @include m.center65w;
 
     @media (max-width: v.$smBrp) {
       justify-content: center;
@@ -110,6 +101,15 @@ import Button from '@shared/buttons/button.vue';
     }
   }
 
+  &__callback {
+    stroke: var(--primary-color);
+    color: rgba(255, 255, 255, 0);
+    stroke-width: 3;
+    margin-right: 5px;
+    min-height: 24px;
+    min-width: 24px;
+  }
+
   &__logoLink {
     min-width: 200px;
     width: 20%;
@@ -128,7 +128,7 @@ import Button from '@shared/buttons/button.vue';
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
-    @include m.center75w;
+    @include m.center65w;
 
     @media (max-width: v.$smBrp) {
       justify-content: center;
