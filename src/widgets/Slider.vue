@@ -50,6 +50,7 @@ onMounted(() => {
   width: 100%;
   align-items: center;
   height: 600px;
+	margin-top: 1.5rem;
 	
   @media (max-width: v.$smBrp) {
     justify-content: center;
@@ -77,14 +78,17 @@ onMounted(() => {
 		text-wrap: balance;
     font-size: clamp(1.4rem, 3.2vw, 4.5rem);
     font-weight: bold;
-		// @include m.debug;
+		min-height: 250px;
+		max-height: 250px;
   }
 	
   &__desc {
-    text-wrap: balance;
-    max-height: 150px;
+		text-wrap: balance;
+    max-height: 200px;
+    min-height: 200px;
     max-width: 600px;
     font-size: clamp(0.8rem, 1vw, 1.5rem);
+		// @include m.debug;
   }
 
   &__but {

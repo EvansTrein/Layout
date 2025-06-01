@@ -46,16 +46,14 @@
 
   @media (max-width: vars.$mdBrp) {
     width: 95%;
-    padding: 0 10px;
+		padding: 1rem 1rem;
   }
 
   @media (max-width: vars.$smBrp) {
     width: 100%;
-    padding: 0 10px;
   }
 
   @media (max-width: vars.$xsBrp) {
-    padding: 0 8px;
   }
 }
 

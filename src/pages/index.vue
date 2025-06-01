@@ -30,7 +30,7 @@ import Footer from '@widgets/Footer.vue';
   display: flex;
 	flex-grow: 1;
   flex-direction: column;
-  gap: 5rem;
+  gap: 3.5rem;
 	padding-bottom: 1rem;
   @include m.center65w;
 }

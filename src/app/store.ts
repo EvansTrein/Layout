@@ -64,13 +64,13 @@ export const useMainStore = defineStore('mainStore', () => {
   const whyСhoose: string[] = [
     'Срок службы 50 лет',
     'Монтаж за 1 день',
-    'Проиводительность до 15 человек',
+    'Производительность до 15 человек',
     'Устойчивость к залповым сборсам',
-    'Отказ от ассунизационной машины',
-    'Работает при отключенной элетоэнергии',
+    'Отказ от ассенизационной машины',
+    'Работает при отключенной электроэнергии',
   ];
 
-  const whyСhooseMap: Record<string, string> = {
+  const whyChooseMap: Record<string, string> = {
     ЭКОНОМИЧНОСТЬ: 'Приобретая станцию у производителя, вы добьетесь максимальной экономии',
     ЭКОЛОГИЧНОСТЬ: 'Стоки, прошедшие через установку, полностью безопасны для окружающей среды',
     ДОЛГОВЕЧНОСТЬ: 'Стеклопластиковый корпус прослужит не менее 50 лет',
@@ -79,5 +79,5 @@ export const useMainStore = defineStore('mainStore', () => {
     НАДЕЖНОСТЬ: 'Смолы импортных производителей — залог нашей надежности',
   };
 
-  return { contacts, requisites, company, catalog, whyСhoose, whyСhooseMap };
+  return { contacts, requisites, company, catalog, whyСhoose, whyChooseMap };
 });
