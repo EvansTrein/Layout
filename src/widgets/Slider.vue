@@ -27,18 +27,23 @@ import { useSlideStore } from './../entities/slide/store';
 
 const slideStore = useSlideStore();
 const active = ref(0);
-
-// const interval = setInterval(() => {
-//   active.value = (active.value + 1) % 3;
-// }, 5000);
+const interval = ref<NodeJS.Timeout | null>(null);
 
 onMounted(() => {
   if (slideStore.data.length === 0) {
     slideStore.init();
   }
+
+  interval.value = setInterval(() => {
+    active.value = (active.value + 1) % 3;
+  }, 5000);
 });
 
-// onUnmounted(() => clearInterval(interval));
+onUnmounted(() => {
+  if (interval.value !== null) {
+    clearInterval(interval.value);
+  }
+});
 </script>
 
 <style scoped lang="scss">
@@ -50,16 +55,16 @@ onMounted(() => {
   width: 100%;
   align-items: center;
   height: 600px;
-	margin-top: 1.5rem;
-	
-  @media (max-width: v.$smBrp) {
+  margin-top: 1.5rem;
+
+  @media (max-width: v.$mdBrp) {
     justify-content: center;
     flex-direction: column;
     text-align: center;
   }
 
   &__info {
-		display: flex;
+    display: flex;
     flex-direction: column;
     gap: 4rem;
     cursor: default;
@@ -67,28 +72,45 @@ onMounted(() => {
     max-width: 800px;
     overflow: hidden;
 
-    @media (max-width: v.$smBrp) {
+    @media (max-width: v.$mdBrp) {
       justify-content: center;
       align-items: center;
       text-align: center;
+      width: 80%;
     }
   }
-	
+
   &__title {
-		text-wrap: balance;
-    font-size: clamp(1.4rem, 3.2vw, 4.5rem);
+    text-wrap: balance;
+    font-size: clamp(2rem, 3.2vw, 4.5rem);
     font-weight: bold;
-		min-height: 250px;
-		max-height: 250px;
+    min-height: 250px;
+    max-height: 250px;
+    // @include m.debug;
+
+    @media (max-width: v.$xxlBrp) {
+      min-height: 160px;
+      max-height: 160px;
+    }
+
+    @media (max-width: v.$smBrp) {
+      min-height: 120px;
+      max-height: 120px;
+    }
   }
-	
+
   &__desc {
-		text-wrap: balance;
+    text-wrap: balance;
     max-height: 200px;
     min-height: 200px;
     max-width: 600px;
-    font-size: clamp(0.8rem, 1vw, 1.5rem);
-		// @include m.debug;
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
+    // @include m.debug;
+
+    @media (max-width: v.$xxlBrp) {
+      min-height: 150px;
+      max-height: 150px;
+    }
   }
 
   &__but {
@@ -100,7 +122,7 @@ onMounted(() => {
     width: 40%;
     max-width: 600px;
     min-height: 40%;
-    @include m.hide(v.$smBrp);
+    @include m.hide(v.$mdBrp);
   }
 
   &__bar {

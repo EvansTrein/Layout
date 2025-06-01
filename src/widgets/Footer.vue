@@ -133,7 +133,7 @@ const mainStore = useMainStore();
   &__requisites {
     display: flex;
     flex-direction: column;
-    min-width: 300px;
+    min-width: 280px;
     height: 200px;
     gap: 1rem;
 
