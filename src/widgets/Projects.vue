@@ -114,7 +114,8 @@ onMounted(() => {
 
   &__works {
     align-self: flex-start;
-    font-size: clamp(0.7rem, 0.85vw, 1.1rem);
+		text-wrap: balance;
+    font-size: clamp(0.6rem, 0.7vw, 1.1rem);
   }
 
   &__customer {
