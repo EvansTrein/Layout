@@ -75,7 +75,7 @@ onMounted(() => {
 	
   &__title {
 		text-wrap: balance;
-    font-size: clamp(1rem, 3.2vw, 4.5rem);
+    font-size: clamp(1.4rem, 3.2vw, 4.5rem);
     font-weight: bold;
 		// @include m.debug;
   }

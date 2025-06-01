@@ -1,10 +1,11 @@
 <template lang="pug">
-Header
-main.wrap
-	Slider
-	Advantage
-	Projects
-Footer
+div.app
+	Header
+	main.app__wrap
+		Slider
+		Advantage
+		Projects
+	Footer
 
 </template>
 
@@ -16,10 +17,18 @@ import Projects from '@widgets/Projects.vue';
 import Footer from '@widgets/Footer.vue';
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @use '~/assets/styles/mixins' as m;
-.wrap {
+
+.app {
+	display: flex;
+	flex-direction: column;
+	min-height: 150vh;
+}
+
+.app__wrap {
   display: flex;
+	flex-grow: 1;
   flex-direction: column;
   gap: 5rem;
 	padding-bottom: 1rem;

@@ -3,19 +3,19 @@ header.header
 	div.header__topBar
 		div.header__topBarItem
 			MarkerSvg.header__topBarIcon
-			p г. Красноярск, ул. Телевизорная 1, стр. 14, оф. 204
-		a.header__topBarItem(href="tel:+73912095757")
+			p {{ mainStore.contacts.city }}, {{ mainStore.contacts.addres }}
+		a.header__topBarItem(:href="`tel:${mainStore.contacts.phone1}`")
 			PhoneSvg.header__topBarIcon
-			p +7 (391) 209 57-57
-		a.header__topBarItem(href="tel:+73912155433")
+			p {{ mainStore.contacts.phone1 }}
+		a.header__topBarItem(:href="`tel:${mainStore.contacts.phone2}`")
 			PhoneSvg.header__topBarIcon
-			p +7 (391) 215 54-33
-		a.header__topBarItem(href="mail:los-bio@mail.ru")
+			p {{ mainStore.contacts.phone2 }}
+		a.header__topBarItem(:href="`mail:${mainStore.contacts.mail}`")
 			MailSvg.header__topBarIcon
-			p los-bio@mail.ru
+			p {{ mainStore.contacts.mail }}
 		div.header__topBarItem
 			CallbackSvg.header__callback
-			p Заказать звонок
+			p {{ mainStore.contacts.callback }}
 	
 	hr.header__line
 	
@@ -38,6 +38,9 @@ import CallbackSvg from '@public/svg/callback.svg';
 import LogoSvg from '@public/svg/logo.svg';
 
 import Button from '@shared/buttons/button.vue';
+import { useMainStore } from './../app/store';
+
+const mainStore = useMainStore();
 </script>
 
 <style scoped lang="scss">

@@ -1,8 +1,10 @@
 <template lang="pug">
-Header
-section {{ projectStore.project }}
+div.app
+	Header
+	section.app__wrap
+		div {{ projectStore.project }}
+	Footer
 //- nuxt-link.b-project__back(to="/") Вернуться на главную
-Footer
 </template>
 
 <script setup lang="ts">
