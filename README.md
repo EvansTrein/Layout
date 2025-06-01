@@ -6,6 +6,8 @@
 
 **Архитектура проекта - FSD**
 
+Демонстрация - https://celebrated-froyo-f545ee.netlify.app
+
 
 ## Setup
 Make sure to install dependencies:
